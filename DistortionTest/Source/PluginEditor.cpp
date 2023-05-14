@@ -22,8 +22,7 @@ DistortionTestAudioProcessorEditor::DistortionTestAudioProcessorEditor (Distorti
     
     // Make sure that before the constructor has finished, you've set the
     // editor's size to whatever you need it to be.
-    setSize (520, 360);
-    
+    setSize (520, 355);
     
     // input gain knob
     inputGainKnob.addListener(this);
@@ -35,14 +34,14 @@ DistortionTestAudioProcessorEditor::DistortionTestAudioProcessorEditor (Distorti
     inputGainKnob.setColour(juce::Slider::ColourIds::textBoxTextColourId, juce::Colours::ivory.darker(0.4));
     inputGainKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::white);
     inputGainKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orangered.brighter(0.1));
-    inputGainKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.3));
+    inputGainKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.15));
     inputGainKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::whitesmoke);
     addAndMakeVisible(inputGainKnob);
 
-    inputGainLabel.setText("Input Gain", juce::dontSendNotification);
+    inputGainLabel.setText("input gain", juce::dontSendNotification);
     inputGainLabel.setColour(juce::Label::textColourId, juce::Colours::ivory.darker(0.4));
     inputGainLabel.attachToComponent(&inputGainKnob, false);
-    inputGainLabel.setFont(juce::Font(18.0));
+    inputGainLabel.setFont(juce::Font("Futura", 19.0, juce::Font::plain));
     inputGainLabel.setJustificationType(juce::Justification::centredTop);
     addAndMakeVisible(inputGainLabel);
     
@@ -55,14 +54,14 @@ DistortionTestAudioProcessorEditor::DistortionTestAudioProcessorEditor (Distorti
     driveKnob.setColour(juce::Slider::ColourIds::textBoxTextColourId, juce::Colours::ivory.darker(0.4));
     driveKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::white);
     driveKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orangered.brighter(0.1));
-    driveKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.3));
+    driveKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.15));
     driveKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::whitesmoke);
     addAndMakeVisible(driveKnob);
     
-    driveLabel.setText("Drive", juce::dontSendNotification);
+    driveLabel.setText("drive", juce::dontSendNotification);
     driveLabel.setColour(juce::Label::textColourId, juce::Colours::ivory.darker(0.4));
     driveLabel.attachToComponent(&driveKnob, false);
-    driveLabel.setFont(juce::Font(18.0));
+    driveLabel.setFont(juce::Font("Futura", 19.0, juce::Font::plain));
     driveLabel.setJustificationType(juce::Justification::centredTop);
     addAndMakeVisible(driveLabel);
     
@@ -76,14 +75,14 @@ DistortionTestAudioProcessorEditor::DistortionTestAudioProcessorEditor (Distorti
     outputGainKnob.setColour(juce::Slider::ColourIds::textBoxTextColourId, juce::Colours::ivory.darker(0.4));
     outputGainKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::white);
     outputGainKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::orangered.brighter(0.1));
-    outputGainKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.3));
+    outputGainKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.15));
     outputGainKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::whitesmoke);
     addAndMakeVisible(outputGainKnob);
     
-    outputGainLabel.setText("Output Gain", juce::dontSendNotification);
+    outputGainLabel.setText("output gain", juce::dontSendNotification);
     outputGainLabel.setColour(juce::Label::textColourId, juce::Colours::ivory.darker(0.4));
     outputGainLabel.attachToComponent(&outputGainKnob, false);
-    outputGainLabel.setFont(juce::Font(18.0));
+    outputGainLabel.setFont(juce::Font("Futura", 19.0, juce::Font::plain));
     outputGainLabel.setJustificationType(juce::Justification::centredTop);
     addAndMakeVisible(outputGainLabel);
     
@@ -99,14 +98,14 @@ DistortionTestAudioProcessorEditor::DistortionTestAudioProcessorEditor (Distorti
     delayKnob.setColour(juce::Slider::ColourIds::textBoxTextColourId, juce::Colours::ivory.darker(0.4));
     delayKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::white);
     delayKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::cornflowerblue.darker(0.2));
-    delayKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.3));
+    delayKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.15));
     delayKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::whitesmoke);
     addAndMakeVisible(delayKnob);
     
-    delayLabel.setText("Delay Time", juce::dontSendNotification);
+    delayLabel.setText("delay time", juce::dontSendNotification);
     delayLabel.setColour(juce::Label::textColourId, juce::Colours::ivory.darker(0.4));
     delayLabel.attachToComponent(&delayKnob, false);
-    delayLabel.setFont(juce::Font(18.0));
+    delayLabel.setFont(juce::Font("Futura", 19.0, juce::Font::plain));
     delayLabel.setJustificationType(juce::Justification::centredTop);
     addAndMakeVisible(delayLabel);
     
@@ -120,14 +119,14 @@ DistortionTestAudioProcessorEditor::DistortionTestAudioProcessorEditor (Distorti
     feedbackKnob.setColour(juce::Slider::ColourIds::textBoxTextColourId, juce::Colours::ivory.darker(0.4));
     feedbackKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::white);
     feedbackKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::cornflowerblue.darker(0.2));
-    feedbackKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.3));
+    feedbackKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.15));
     feedbackKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::whitesmoke);
     addAndMakeVisible(feedbackKnob);
     
-    feedbackLabel.setText("Feedback", juce::dontSendNotification);
+    feedbackLabel.setText("feedback", juce::dontSendNotification);
     feedbackLabel.setColour(juce::Label::textColourId, juce::Colours::ivory.darker(0.4));
     feedbackLabel.attachToComponent(&feedbackKnob, false);
-    feedbackLabel.setFont(juce::Font(18.0));
+    feedbackLabel.setFont(juce::Font("Futura", 19.0, juce::Font::plain));
     feedbackLabel.setJustificationType(juce::Justification::centredTop);
     addAndMakeVisible(feedbackLabel);
     
@@ -141,14 +140,14 @@ DistortionTestAudioProcessorEditor::DistortionTestAudioProcessorEditor (Distorti
     mixKnob.setColour(juce::Slider::ColourIds::textBoxTextColourId, juce::Colours::ivory.darker(0.4));
     mixKnob.setColour(juce::Slider::ColourIds::textBoxOutlineColourId, juce::Colours::white);
     mixKnob.setColour(juce::Slider::ColourIds::rotarySliderFillColourId, juce::Colours::cornflowerblue.darker(0.2));
-    mixKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.3));
+    mixKnob.setColour(juce::Slider::ColourIds::thumbColourId, juce::Colours::ivory.darker(0.15));
     mixKnob.setColour(juce::Slider::ColourIds::rotarySliderOutlineColourId, juce::Colours::whitesmoke);
     addAndMakeVisible(mixKnob);
     
-    mixLabel.setText("Mix", juce::dontSendNotification);
+    mixLabel.setText("mix", juce::dontSendNotification);
     mixLabel.setColour(juce::Label::textColourId, juce::Colours::ivory.darker(0.4));
     mixLabel.attachToComponent(&mixKnob, false);
-    mixLabel.setFont(juce::Font(18.0));
+    mixLabel.setFont(juce::Font("Futura", 19.0, juce::Font::plain));
     mixLabel.setJustificationType(juce::Justification::centredTop);
     addAndMakeVisible(mixLabel);
     
@@ -156,7 +155,7 @@ DistortionTestAudioProcessorEditor::DistortionTestAudioProcessorEditor (Distorti
     title.setText("delay // drive", juce::dontSendNotification);
     title.setJustificationType(juce::Justification::centred);
     title.setBounds(135,10,250,50);
-    title.setFont(juce::Font("Arial Black", 27.0, juce::Font::bold));
+    title.setFont(juce::Font("Futura", 27.0, juce::Font::bold));
     title.setColour(juce::Label::ColourIds::textColourId, juce::Colours::ivory.darker(0.4));
     addAndMakeVisible(title);
     
